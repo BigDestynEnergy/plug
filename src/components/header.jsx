@@ -19,7 +19,7 @@ export default function Header(){
         {name: "Jobs", icon: people, click: peoplefill, path: "jobs"},
         {name: "Inbox", icon: inbox, click: inboxfill, path: "inbox"},
         {name: "Settings", icon: gear, click: gearfill, path: "settings"},
-        {name: "Profile", icon: des, click: des, path: "profile"},
+        {name: "Profile", icon: des, click: des, path: "profile", noInvert: true},
     ]
 
     const nvi = useNavigate();
@@ -38,11 +38,13 @@ export default function Header(){
                         >{({isActive}) => (
                             <>
                             {isActive ?  <span>{tab.name}</span> : ""}
-                            <img
-                            className={isActive ? "image" : ""}
-                            id={tab.name}
-                            src={isActive ? tab.click : tab.icon} alt="" />
-                            </>
+                           <img
+                                className={tab.noInvert ? "" : isActive ? "image" : ""}
+                                id={tab.name}
+                                src={isActive ? tab.click : tab.icon}
+                                alt=""
+/>
+                           </>
                         )}</NavLink>
                     )
                 })}

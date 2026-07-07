@@ -1,0 +1,66 @@
+
+
+.note{
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    
+    padding: 24px;
+    animation: up .3s ease forwards;
+}
+
+.note-card{
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    padding: 24px;
+    border-radius: 32px;
+
+}
+
+.line{
+    padding: 4px;
+    width: 40px;
+    border-radius: 8px;
+    background: #111;
+    position: absolute;
+    top: 10px;
+}
+
+.content{
+    width: 300px;
+    font-weight: 600;
+    color: #111;
+    border-radius: 8px;
+    padding: 4px;
+    text-align: center;
+}
+
+.note span{
+    padding: 8px;
+    width: 300px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@keyframes up{
+    from{
+        opacity: 0; transform: translateY(40px);
+    }
+
+     to{
+        opacity: 1; transform: translateY(0px);
+    }
+}

@@ -10,7 +10,7 @@ header{
     z-index: 1;
 }
 
-header h1{color: #071b53; cursor: pointer;}
+header h1{color: #111; cursor: pointer;}
 
 .tabs{
     display: flex;
@@ -53,11 +53,17 @@ height: 30px; width: 30px; border-radius: 16px;
     border-radius: 16px;
     transition: all .3s ease;
     display: flex;
+    font-weight: 600;
     align-items: center;
 }
 
+.active .image{
+    filter: invert(1);
+}
+
 .active{
-    background: #bdbdbd;
+    background: var(--color);
+
     color: var(--bg);
 }
 

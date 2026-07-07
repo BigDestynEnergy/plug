@@ -5,10 +5,12 @@ import Settings from "../pages/settings";
 import Jobs from "../pages/jobs"
 import Inbox from "../pages/Inbox";
 import Profile from "../pages/profile";
+import { NotifyProvider } from "../components/NotifyContext";
 
 export default function AppRouter(){
     return(
-        <BrowserRouter>
+        <NotifyProvider>
+            <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}/>
@@ -19,5 +21,6 @@ export default function AppRouter(){
                 </Route>
             </Routes>
         </BrowserRouter>
+        </NotifyProvider>
     )
 }

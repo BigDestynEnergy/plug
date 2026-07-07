@@ -3,12 +3,12 @@
 :root{
   --bg: #fff; --color: #111; --bleu: #012542;
   --gray: #333;
-  --accent: #071b53;
+  --accent: #008181;
 }
 
 .dark{
   --gray: #c2c2c2;
-  --bg: #111; --color: #fff; --bleu: #012542; --accent: #071b53;
+  --bg: #111; --color: #fff; --bleu: #012542; --accent: #008181;
 }
 
 body{

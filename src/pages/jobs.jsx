@@ -6,11 +6,14 @@ import defaultAvatar from "../images/Des 2.jpg";
 import "../styles/home.css";
 import "../styles/jobs.css";
 import workers from "../data/workers dummy data";
+import { useNotify } from "../components/NotifyContext";
 
 export default function Jobs() {
   const [src, setSrc] = useState("");
   const [over, setOver] = useState(null);
   const [filtered, setFiltered] = useState("All");
+
+  const { notify } = useNotify();
 
   const tasks = [
     { task: "All", filter: "All" },
@@ -49,7 +52,7 @@ export default function Jobs() {
 
           <select
             value={filtered}
-            onChange={(e) => setFiltered(e.target.value)}
+            onChange={(e) => {setFiltered(e.target.value); notify(`Now displaying ${filtered} only`)}}
             className="filter-cards"
           >
             {tasks.map((task) => (

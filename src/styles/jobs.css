@@ -1,0 +1,47 @@
+.jobs{
+    padding: 8px;
+}
+.upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.search{
+      display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.search img{cursor: pointer;}
+
+.search input{
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #999;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.search input:focus{
+    outline: none;
+    border-color: var(--accent);
+}
+
+.upper select{
+    padding: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #111;
+}
+
+.upper select:focus{
+    border-color: #ccc;
+}
+
+select option{
+    cursor: pointer;
+}

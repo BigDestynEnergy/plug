@@ -7,6 +7,7 @@ header{
     padding: 16px;
     background: var(--bg);
     border-bottom: 2px solid #ccc;
+    z-index: 1;
 }
 
 header h1{color: #071b53; cursor: pointer;}
@@ -23,7 +24,7 @@ header h1{color: #071b53; cursor: pointer;}
 }
 
 .menu{
-position: absolute;
+position: fixed;
 bottom: 0;
 right: 0;
 margin-bottom: 30px;

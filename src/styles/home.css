@@ -52,7 +52,7 @@
 @keyframes pop {
     0%, 100% {
         transform: scale(1);
-        background: #05a5a5;
+        background: #1db954;
     }
 
     25% {
@@ -62,13 +62,14 @@
 
     50% {
         transform: scale(1.5);
-        background: #00ffff;
+        background: #1db954;
     }
 
     75% {
         transform: scale(1.15);
-        background: #05b9b9;
+        background: #1db954;
     }
+    
 }
 
 .need{
@@ -127,14 +128,141 @@
     background: #071b53;
 }
 
+.workers {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    position: relative;
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;align-items: center;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 16px;
+  color: #0f8b4c;
+    background: #e9f9ef;
+}
+
+.contact img{
+    filter: invert(0);
+}
+
+.worker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.worker:hover {
+    transform: translateY(-2px);
+    border-color: #999;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+.worker-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.worker-image {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.worker-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.worker-info h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+.worker-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.worker-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.worker-rating img {
+    width: 16px;
+    height: 16px;
+}
+
+.status {
+    margin-left: 8px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.available {
+    color: #0f8b4c;
+    background: #e9f9ef;
+}
+
+.unavailable {
+    color: #b42318;
+    background: #feeceb;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.online {
+    background: #008181;
+    animation: pop 2s linear infinite;
+}
+
+.offline {
+    background: #cbd5e1;
+}
+
+
 @media (max-width: 900px) {
     .need{
         width: 80%;
     }
+
+    .workers {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
 }
 
 @media (max-width: 560px) {
     .need{
         width: 80%;
     }
+
+    .workers {
+    display: grid; grid-template-columns: repeat(1, 1fr);
+    gap: 4px;
+}
 }

@@ -7,5 +7,5 @@ export default function App(){
   const [sign, setSign] = useState(!false);
 
   if(sign) return <AppRouter/>
-  else return(<AuthRouter/>)
+ // else return(<AuthRouter/>)
 }

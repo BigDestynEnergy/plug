@@ -1,0 +1,140 @@
+.home{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.home h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.card{
+    background: #ccc;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 16px;
+    color: var(--bg);
+    font-weight: 600;
+    cursor: pointer;
+    gap: 8px;
+    transition: all .3s ease;
+}
+
+#hire{
+    background: #071b53;
+}
+
+#earn:hover{
+    border-color: #071b53;
+}
+
+#earn{
+    border: 1px solid #b8b6b6;
+}
+
+#hire img{
+    filter: invert(1);
+}
+
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+        background: #05a5a5;
+    }
+
+    25% {
+        transform: scale(1.15);
+        background: #05b9b9;
+    }
+
+    50% {
+        transform: scale(1.5);
+        background: #00ffff;
+    }
+
+    75% {
+        transform: scale(1.15);
+        background: #05b9b9;
+    }
+}
+
+.need{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    color: var(--bg);
+    padding: 12px;
+    width: 40%;
+    border-radius: 20px;
+    gap: 4px;
+}
+
+
+
+.needbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.need button{
+    margin-top: 4px;
+    padding: 8px;
+    width: 89%;
+    font-family: inherit;
+    font-weight: 600; color: var(--color);
+    border: none; border-radius: 16px;
+    background: var(--bg);
+    cursor: pointer;
+}
+
+.find{
+    margin-top: 10px; padding: 20px;
+}
+.works{
+    display: flex; align-items: center; gap: 8px;
+}
+
+.work-button{
+    padding: 6px; border: 1px solid  transparent;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all .3s ease;
+    cursor: pointer;
+    color: var(--color);
+    background: var(--bg);
+}
+
+.work-button.active{
+    color: var(--bg);
+    background: #071b53;
+}
+
+@media (max-width: 900px) {
+    .need{
+        width: 80%;
+    }
+}
+
+@media (max-width: 560px) {
+    .need{
+        width: 80%;
+    }
+}
